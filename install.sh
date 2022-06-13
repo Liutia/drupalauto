@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 apt_update(){
 	echo "Update system. Please wait."
