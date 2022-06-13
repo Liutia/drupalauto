@@ -11,7 +11,7 @@ echo "Write path to db"
 read db_path
 
 cd $path
-git clone $repo $name
+git clone $repo $name > /dev/null 2>&1
 cd $name
 
 # if [ -z $name ]
