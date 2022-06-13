@@ -10,7 +10,7 @@ echo "  4) Exit"
 read n
 case $n in
   1) sh bin/newproject.sh;;
-  2) echo "You chose Option 2";;
+  2) sh bin/deployold.sh;;
   3) fin pl -a ; sh main_menu.sh ;;
   4) break;;
   *) echo "invalid option";;
