@@ -46,4 +46,4 @@ wget -P . "https://github.com/Liutia/drupalauto/blob/main/bin/config/settings.lo
 
 echo "Local site created."
 pwd
-
+break
