@@ -29,7 +29,6 @@ fin addon install pma
 fin project start
 fin db import $db_path
 fin drush cr
-} > /dev/null 2>&1
 
 if [ -z $web ]
 then
@@ -37,12 +36,15 @@ cd sites/default/
 else
 cd web/sites/default/
 fi
+
 touch settings.php
 echo "if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {" >> settings.php
 echo "include $app_root . '/' . $site_path . '/settings.local.php';" >> settings.php
 echo "}" >> settings.php
 
 wget -P . "https://github.com/Liutia/drupalauto/blob/main/bin/config/settings.local.php"
+
+} > /dev/null 2>&1
 
 echo "Local site created."
 pwd
