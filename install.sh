@@ -2,26 +2,26 @@
 
 apt_update(){
 	echo "Update system. Please wait."
-	apt-get update > log.txt
+	apt-get update
 }
 utilit_install(){
 	echo "Installation utils. Please wait."
 	
 	echo "Installation php. Please wait."
-	apt-get -y install  ca-certificates apt-transport-https software-properties-common > log.txt
-	add-apt-repository -y ppa:ondrej/php > log.txt
+	apt-get -y install  ca-certificates apt-transport-https software-properties-common
+	add-apt-repository -y ppa:ondrej/php
 	
 	echo "Installation docksal. Please wait."
-	curl -o docksal.sh -fsSL https://get.docksal.io > log.txt
+	curl -o docksal.sh -fsSL https://get.docksal.io
 	sh docksal.sh > log.txt
 	
 	echo "Installation phpstorm. Please wait."
-	snap install phpstorm --classic > log.txt
+	snap install phpstorm --classic
 }
 
 # update all packages
-apt_update > log.txt
-utilit_install > log.txt
+apt_update
+utilit_install
 
 echo "Drupal Auto installation is completed."
 sleep 5
