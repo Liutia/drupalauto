@@ -21,7 +21,7 @@ utilit_install(){
 	echo "Installation docksal. Please wait."
 	bash <(curl -fsSL https://get.docksal.io) > /dev/null 2>&1
 	fi
-	if dpkg -s phpstorm
+	if snap info phpstorm
 	then echo "Phpstorm installed."
 	else
 	echo "Installation phpstorm. Please wait."
