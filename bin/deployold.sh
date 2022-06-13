@@ -9,8 +9,8 @@ echo "Default repository name"
 read name
 
 # cd $path
-if [ -z $name]
-then 
+if [ -z $name ]
+then
 echo "0"
 else
 echo "1"
