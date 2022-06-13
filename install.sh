@@ -21,8 +21,12 @@ utilit_install(){
 	echo "Installation docksal. Please wait."
 	bash <(curl -fsSL https://get.docksal.io) > /dev/null 2>&1
 	fi
+	if dpkg -s phpstorm
+	then echo "Phpstorm installed."
+	else
 	echo "Installation phpstorm. Please wait."
 	snap install phpstorm --classic > /dev/null 2>&1
+	fi
 }
 
 # update all packages
@@ -30,5 +34,5 @@ apt_update
 utilit_install
 
 echo "Drupal Auto installation is completed."
-clear
+
 sh drupalauto_menu.sh
