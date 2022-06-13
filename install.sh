@@ -8,7 +8,8 @@ utilit_install(){
 	echo "Installation utils. Please wait."
 	apt-get -y install  ca-certificates apt-transport-https software-properties-common
 	add-apt-repository -y ppa:ondrej/php
-	wget --no-check-certificate https://get.docksal.io
+	wget --no-check-certificate https://get.docksal.io > docksal.sh
+	sh docksal.sh
 }
 
 # update all packages
