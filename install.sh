@@ -6,12 +6,15 @@ apt_update(){
 }
 utilit_install(){
 	echo "Installation utils. Please wait."
-	
+	if dpkg -s ca-certificates apt-transport-https software-properties-common
+	then echo "Php installed."
+	else
 	echo "Installation php. Please wait."
 	{
 	apt-get -y install  ca-certificates apt-transport-https software-properties-common 
 	add-apt-repository -y ppa:ondrej/php
 	} > /dev/null 2>&1
+	fi
 	echo "Installation docksal. Please wait."
 	bash <(curl -fsSL https://get.docksal.io) > /dev/null 2>&1
 	echo "Installation phpstorm. Please wait."
