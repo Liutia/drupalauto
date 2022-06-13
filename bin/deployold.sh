@@ -31,13 +31,12 @@ fin db import $db_path
 fin drush cr
 } > /dev/null 2>&1
 
-web = find / -type d -name "web" 
-# if [ -z $web ]
-# then
-# cd sites/default/
-# else
-# cd web/sites/default/
-# fi
+if [ -z $web ]
+then
+cd sites/default/
+else
+cd web/sites/default/
+fi
 touch settings.php
 echo "if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {" >> settings.php
 echo "include $app_root . '/' . $site_path . '/settings.local.php';" >> settings.php
