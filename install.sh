@@ -6,7 +6,7 @@ apt_update(){
 }
 utilit_install(){
 	echo "Installation utils. Please wait."
-	if dpkg -s ca-certificates apt-transport-https software-properties-common
+	if dpkg -s ca-certificates apt-transport-https software-properties-common > /dev/null 2>&1
 	then echo "Php installed."
 	else
 	echo "Installation php. Please wait."
