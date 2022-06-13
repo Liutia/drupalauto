@@ -6,17 +6,16 @@ apt_update(){
 }
 utilit_install(){
 	echo "Installation utils. Please wait."
-	echo "Installation php. Please wait."
+
 	{
 	apt-get -y install  ca-certificates apt-transport-https software-properties-common 
 	add-apt-repository -y ppa:ondrej/php
 	} > /dev/null 2>&1
-
-	echo "Installation docksal. Please wait."
+	echo "30%"
 	bash <(curl -fsSL https://get.docksal.io) > /dev/null 2>&1
-
-	echo "Installation phpstorm. Please wait."
+	echo "60%"
 	snap install phpstorm --classic > /dev/null 2>&1
+	echo "100%"
 }
 
 # update all packages
@@ -24,5 +23,6 @@ apt_update
 utilit_install
 
 echo "Drupal Auto installation is completed."
+sleep 3
 clear
 sh drupalauto_menu.sh
