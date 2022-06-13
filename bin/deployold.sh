@@ -29,16 +29,22 @@ fin addon install pma
 fin project start
 fin db import $db_path
 fin drush cr
-
-fin 
-# if [ -z  ]
-# then
-
-# else
-# echo "1"
-# fi
-
 } > /dev/null 2>&1
+
+web = find / -type d -name "web" 
+if [ -z $web ]
+then
+cd sites/default/
+else
+cd web/sites/default/
+fi
+
+echo "if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {" >> settings.php
+echo "include $app_root . '/' . $site_path . '/settings.local.php';" >> settings.php
+echo "}" >> settings.php
+
+wget "https://github.com/Liutia/drupalauto/blob/main/bin/config/settings.local.php"
+
 echo "Local site created."
 pwd
-break
+
