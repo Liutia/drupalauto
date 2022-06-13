@@ -7,4 +7,4 @@ git clone https://github.com/Liutia/drupalauto.git > log.txt
 
 cd drupalauto/
 mv ../log.txt .
-sh install.sh > log.txt
+sh install.sh
