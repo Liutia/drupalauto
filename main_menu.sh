@@ -9,9 +9,9 @@ echo "  4) Exit"
 
 read n
 case $n in
-  1) sh bin/newproject.sh;;
-  2) sh bin/deployold.sh;;
-  3) fin pl -a ; sh main_menu.sh ;;
+  1) bash bin/newproject.sh;;
+  2) bash bin/deployold.sh;;
+  3) fin pl -a ; bash main_menu.sh ;;
   4) break;;
   *) echo "invalid option";;
 esac
