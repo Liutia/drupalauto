@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "Write path to project directory"
 read path
 echo "Write project repository path"
