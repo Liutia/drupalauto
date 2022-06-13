@@ -43,7 +43,7 @@ echo "if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {" 
 echo "include $app_root . '/' . $site_path . '/settings.local.php';" >> settings.php
 echo "}" >> settings.php
 
-wget "https://github.com/Liutia/drupalauto/blob/main/bin/config/settings.local.php"
+wget -P . "https://github.com/Liutia/drupalauto/blob/main/bin/config/settings.local.php"
 
 echo "Local site created."
 pwd
