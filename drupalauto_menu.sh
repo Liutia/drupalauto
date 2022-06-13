@@ -1,2 +1,2 @@
 #!/bin/bash 
-sh main_menu.sh
+bash main_menu.sh
