@@ -1,33 +1,16 @@
 #!/bin/bash
 
-HEIGHT=15
-WIDTH=40
-CHOICE_HEIGHT=4
-BACKTITLE="Backtitle here"
-TITLE="Title here"
-MENU="Choose one of the following options:"
+echo "select the operation ************"
+echo "  1)operation 1"
+echo "  2)operation 2"
+echo "  3)operation 3"
+echo "  4)operation 4" 
 
-OPTIONS=( 1 "Option 1"
-         2 "Option 2"
-         3 "Option 3")
-
-CHOICE=$(dialog --clear \
-                --backtitle "$BACKTITLE" \
-                --title "$TITLE" \
-                --menu "$MENU" \
-                $HEIGHT $WIDTH $CHOICE_HEIGHT \
-                "${OPTIONS[@]}" \
-                2>&1 >/dev/tty)
-
-
-case $CHOICE in
-        1)
-            echo "You chose Option 1"
-            ;;
-        2)
-            echo "You chose Option 2"
-            ;;
-        3)
-            echo "You chose Option 3"
-            ;;
+read n
+case $n in
+  1) echo "You chose Option 1";;
+  2) echo "You chose Option 2";;
+  3) echo "You chose Option 3";;
+  4) echo "You chose Option 4";;
+  *) echo "invalid option";;
 esac
