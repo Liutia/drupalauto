@@ -7,7 +7,7 @@ BACKTITLE="Backtitle here"
 TITLE="Title here"
 MENU="Choose one of the following options:"
 
-OPTIONS=(1 "Option 1"
+OPTIONS=( 1 "Option 1"
          2 "Option 2"
          3 "Option 3")
 
