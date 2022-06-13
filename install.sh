@@ -25,4 +25,4 @@ utilit_install
 echo "Drupal Auto installation is completed."
 sleep 3
 clear
-sh drupalauto_menu.sh
+bash drupalauto_menu.sh
