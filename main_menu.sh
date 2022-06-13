@@ -19,7 +19,7 @@ CHOICE=$(dialog --clear \
                 "${OPTIONS[@]}" \
                 2>&1 >/dev/tty)
 
-clear
+
 case $CHOICE in
         1)
             echo "You chose Option 1"
