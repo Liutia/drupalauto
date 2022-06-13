@@ -15,8 +15,12 @@ utilit_install(){
 	add-apt-repository -y ppa:ondrej/php
 	} > /dev/null 2>&1
 	fi
+	if fin
+	then echo "docksal installed."
+	else
 	echo "Installation docksal. Please wait."
 	bash <(curl -fsSL https://get.docksal.io) > /dev/null 2>&1
+	
 	echo "Installation phpstorm. Please wait."
 	snap install phpstorm --classic > /dev/null 2>&1
 }
