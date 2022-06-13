@@ -12,4 +12,4 @@ fin project start
 } > /dev/null 2>&1
 
 cd drupalauto/
-sh main_menu.sh
+bash main_menu.sh
