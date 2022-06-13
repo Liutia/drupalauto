@@ -23,5 +23,5 @@ apt_update
 utilit_install
 
 echo "Drupal Auto installation is completed."
-sleep 5
+clear
 sh drupalauto_menu.sh
