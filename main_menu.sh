@@ -9,7 +9,7 @@ echo "  4) Exit"
 
 read n
 case $n in
-  1) echo "You chose Option 1";;
+  1) sh bin/newproject.sh;;
   2) echo "You chose Option 2";;
   3) fin pl -a ; sh main_menu.sh ;;
   4) break;;
