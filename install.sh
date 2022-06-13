@@ -8,7 +8,7 @@ utilit_install(){
 	print "Installation utils. Please wait." 1
 	apt-get -y install  ca-certificates apt-transport-https software-properties-common
   add-apt-repository ppa:ondrej/php
-  bash <(curl -fsSL https://get.docksal.io)
+  curl -fsSL https://get.docksal.io
 }
 
 # update all packages
