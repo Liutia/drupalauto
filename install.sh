@@ -20,7 +20,7 @@ utilit_install(){
 	else
 	echo "Installation docksal. Please wait."
 	bash <(curl -fsSL https://get.docksal.io) > /dev/null 2>&1
-	
+	fi
 	echo "Installation phpstorm. Please wait."
 	snap install phpstorm --classic > /dev/null 2>&1
 }
