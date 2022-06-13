@@ -8,10 +8,11 @@ echo "Write project directory name"
 echo "Default repository name"
 read name
 
-cd $path
+# cd $path
 if $name
 then echo "0"
 else
 echo "1"
-cd drupalauto/
+fi
+# cd drupalauto/
 sh main_menu.sh
