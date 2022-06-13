@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "  "
 echo "  Select the operation"
 echo "  1) Create new project"
 echo "  2) Deploy an existing project"
