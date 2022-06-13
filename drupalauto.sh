@@ -1,10 +1,8 @@
 #!/bin/bash
 
 cd
-touch log.txt
 rm -rf drupalauto/
-git clone https://github.com/Liutia/drupalauto.git > log.txt
+git clone https://github.com/Liutia/drupalauto.git
 
 cd drupalauto/
-mv ../log.txt .
 sh install.sh
