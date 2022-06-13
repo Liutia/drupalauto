@@ -6,6 +6,7 @@ echo "  1) Create new project"
 echo "  2) Deploy an existing project"
 echo "  3) Display a list of projects"
 echo "  4) Exit" 
+echo "  "
 
 read n
 case $n in
