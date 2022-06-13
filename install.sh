@@ -22,8 +22,8 @@ utilit_install(){
 }
 
 # update all packages
-apt_update > /dev/null 2>&1
-utilit_install > /dev/null 2>&1
+apt_update
+utilit_install
 
 echo "Drupal Auto installation is completed."
 sleep 5
