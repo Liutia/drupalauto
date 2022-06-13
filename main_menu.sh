@@ -10,7 +10,7 @@ read n
 case $n in
   1) echo "You chose Option 1";;
   2) echo "You chose Option 2";;
-  3) echo "You chose Option 3";;
-  4) echo "You chose Option 4" ; break;;
+  3) fin pl -a;;
+  4) break;;
   *) echo "invalid option";;
 esac
