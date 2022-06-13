@@ -2,8 +2,7 @@
 
 cd
 rm -rf drupalauto/
-git clone https://github.com/Liutia/drupalauto.git
+git clone https://github.com/Liutia/drupalauto.git &> /dev/null
 
 cd drupalauto/
-
-sh install.sh
+sh install.sh &> /dev/null
