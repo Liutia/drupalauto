@@ -13,7 +13,7 @@ cd
 read n
 echo "  "
 case $n in
-  1) rm -rf drupalauto/ > /dev/null 2>&1 ; git clone https://github.com/Liutia/drupalauto.git > /dev/null 2>&1 ; echo "Script updated"";;
+  1) rm -rf drupalauto/ > /dev/null 2>&1 ; git clone https://github.com/Liutia/drupalauto.git > /dev/null 2>&1 ; echo "Script updated";;
   2) bash drupalauto/install.sh;;
   3) bash drupalauto/drupalauto_menu.sh ;;
   *) echo "Invalid option";;
