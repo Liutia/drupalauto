@@ -42,10 +42,6 @@ echo "}" >> settings.php
 wget -P . "https://github.com/Liutia/drupalauto/blob/main/bin/config/settings.local.php"
 } > /dev/null 2>&1
 
-cd
-cd $path
-cd $name
-
 echo "Local site created."
 pwd
 break
