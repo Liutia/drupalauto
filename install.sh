@@ -9,7 +9,7 @@ utilit_install(){
 	{
 	apt-get -y install  ca-certificates apt-transport-https software-properties-common 
 	add-apt-repository -y ppa:ondrej/php
-	bash drupalauto/utility/docksal.sh
+# 	bash drupalauto/utility/docksal.sh
 	snap install phpstorm --classic
 	} > /dev/null 2>&1
 }
