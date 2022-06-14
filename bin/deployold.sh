@@ -34,6 +34,8 @@ bash ~/drupalauto/bin/addons.sh
 fin db import $db_path
 fin drush cr
 
+
+web = find . -type d -name "web" 
 if [ -z $web ]
 then
 echo "if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {include $app_root . '/' . $site_path . '/settings.local.php';}" >> sites/default/settings.php
