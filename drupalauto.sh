@@ -6,7 +6,7 @@ then
 echo "  "
 echo "  Select the option"
 echo "  1) Update script"
-echo "  2) Install/Update Utility"
+echo "  2) Install/Update Utility(With bug's)"
 echo "  3) Continue"
 echo "  "
 cd 
