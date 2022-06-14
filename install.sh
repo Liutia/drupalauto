@@ -14,7 +14,7 @@ utilit_install(){
 	echo "30%"
 # 	bash <(curl -fsSL https://get.docksal.io)
 	echo "60%"
-	snap install phpstorm --classic
+	snap install phpstorm --classic > /dev/null 2>&1
 	echo "100%"
 }
 
