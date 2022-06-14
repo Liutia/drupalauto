@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/sudo bash
 
 apt_update(){
 	echo "Update system. Please wait."
@@ -7,22 +7,19 @@ apt_update(){
 utilit_install(){
 	echo "Installation utils. Please wait."
 
-# 	{
-# 	apt-get -y install  ca-certificates apt-transport-https software-properties-common 
-# 	add-apt-repository -y ppa:ondrej/php
-# 	} > /dev/null 2>&1
-	echo "30%"
-# 	bash <(curl -fsSL https://get.docksal.io)
-	echo "60%"
-	snap install phpstorm --classic > /dev/null 2>&1
-	echo "100%"
+	{
+	apt-get -y install  ca-certificates apt-transport-https software-properties-common 
+	add-apt-repository -y ppa:ondrej/php
+	bash drupalauto/utility/docksal.sh
+	snap install phpstorm --classic
+	} > /dev/null 2>&1
 }
 
-# update all packages
+update all packages
 apt_update
 utilit_install
 
-echo "Drupal Auto installation is completed."
+echo "Drupalauto utility installation is completed."
 sleep 3
 clear
-bash drupalauto.sh
+bash drupalauto/drupalauto.sh
