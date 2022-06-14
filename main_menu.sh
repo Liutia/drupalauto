@@ -12,7 +12,7 @@ read n
 case $n in
   1) bash drupalauto/bin/newproject.sh;;
   2) bash drupalauto/bin/deployold.sh;;
-  3) fin pl -a ; bash main_menu.sh ;;
+  3) fin pl -a ; bash drupalauto/main_menu.sh ;;
   4) break;;
   *) echo "invalid option";;
 esac
