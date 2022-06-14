@@ -37,10 +37,10 @@ fin drush cr
 if [ -z $web ]
 then
 echo "if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {include $app_root . '/' . $site_path . '/settings.local.php';}" >> sites/default/settings.php
-wget -P sites/default "https://github.com/Liutia/drupalauto/blob/main/bin/config/settings.local.php"
+cp ~/drupalauto/bin/config/settings.local.php web/sites/default/
 else
 echo "if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {include $app_root . '/' . $site_path . '/settings.local.php';}" >> web/sites/default/settings.php
-wget -P web/sites/default "https://github.com/Liutia/drupalauto/blob/main/bin/config/settings.local.php"
+cp ~/drupalauto/bin/config/settings.local.php web/sites/default/
 fi
 
 # } > /dev/null 2>&1
