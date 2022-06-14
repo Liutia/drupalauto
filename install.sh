@@ -12,9 +12,9 @@ utilit_install(){
 # 	add-apt-repository -y ppa:ondrej/php
 # 	} > /dev/null 2>&1
 	echo "30%"
-	bash <(curl -fsSL https://get.docksal.io) > /dev/null 2>&1
+	bash <(curl -fsSL https://get.docksal.io)
 	echo "60%"
-	snap install phpstorm --classic > /dev/null 2>&1
+	snap install phpstorm --classic
 	echo "100%"
 }
 
