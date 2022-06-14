@@ -14,15 +14,19 @@ cd $path
 git clone $repo $name > /dev/null 2>&1
 cd $name
 
-# if [ -z $name ]
-# then
-
-# else
-# echo "1"
-# fi
 echo "Configuration site. Please wait"
-# {
-fin up
+
+fin up > /dev/null 2>&1
+
+echo "Set composer version[1,2]"
+read V
+case $V in
+  1) fin config set COMPOSER_DEFAULT_VERSION=1;;
+  2) fin config set COMPOSER_DEFAULT_VERSION=2;;
+  *) echo "Invalid version";;
+esac
+
+fin restart
 fin composer install
 bash ~/drupalauto/bin/addons.sh
 fin db import $db_path
