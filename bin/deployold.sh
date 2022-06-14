@@ -21,7 +21,7 @@ cd $name
 # echo "1"
 # fi
 echo "Configuration site. Please wait"
-{
+# {
 fin up
 fin composer install
 bash ~/drupalauto/bin/addons.sh
@@ -40,7 +40,7 @@ echo "include $app_root . '/' . $site_path . '/settings.local.php';" >> settings
 echo "}" >> settings.php
 
 wget -P . "https://github.com/Liutia/drupalauto/blob/main/bin/config/settings.local.php"
-} > /dev/null 2>&1
+# } > /dev/null 2>&1
 
 echo "Local site created."
 pwd
