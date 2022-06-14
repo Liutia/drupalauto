@@ -26,6 +26,8 @@ case $V in
   *) echo "Invalid version";;
 esac
 
+echo "Your composer version $V"
+
 fin restart
 fin composer install
 bash ~/drupalauto/bin/addons.sh
