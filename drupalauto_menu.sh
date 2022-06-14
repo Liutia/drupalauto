@@ -1,2 +1,2 @@
 #!/bin/bash 
-bash main_menu.sh
+bash drupalauto/main_menu.sh
