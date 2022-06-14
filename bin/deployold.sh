@@ -14,25 +14,25 @@ cd $path
 git clone $repo $name > /dev/null 2>&1
 cd $name
 
-echo "Configuration site. Please wait"
+# echo "Configuration site. Please wait"
 
-fin up > /dev/null 2>&1
+# fin up > /dev/null 2>&1
 
-echo "Set composer version[1,2]"
-read V
-case $V in
-  1) fin config set COMPOSER_DEFAULT_VERSION=1 > /dev/null 2>&1;;
-  2) fin config set COMPOSER_DEFAULT_VERSION=2 > /dev/null 2>&1;;
-  *) echo "Invalid version";;
-esac
+# echo "Set composer version[1,2]"
+# read V
+# case $V in
+#   1) fin config set COMPOSER_DEFAULT_VERSION=1 > /dev/null 2>&1;;
+#   2) fin config set COMPOSER_DEFAULT_VERSION=2 > /dev/null 2>&1;;
+#   *) echo "Invalid version";;
+# esac
 
-echo "Your composer version $V"
+# echo "Your composer version $V"
 
-fin restart > /dev/null 2>&1
-fin composer install
-bash ~/drupalauto/bin/addons.sh
-fin db import $db_path
-fin drush cr
+# fin restart > /dev/null 2>&1
+# fin composer install
+# bash ~/drupalauto/bin/addons.sh
+# fin db import $db_path
+# fin drush cr
 
 
 web = find . -type d -name "web" 
