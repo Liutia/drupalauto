@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "  "
-echo "  Select the operation"
+echo "  Select the option"
 echo "  1) Create new project"
 echo "  2) Deploy an existing project"
 echo "  3) Display a list of projects"
@@ -15,5 +15,5 @@ case $n in
   2) bash drupalauto/bin/deployold.sh;;
   3) fin pl -a ; bash drupalauto/main_menu.sh ;;
   4) exit;;
-  *) echo "invalid option";;
+  *) echo "Invalid option";;
 esac
