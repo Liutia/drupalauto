@@ -14,7 +14,7 @@ utilit_install(){
 	} > /dev/null 2>&1
 }
 
-update all packages
+# update all packages
 apt_update
 utilit_install
 
