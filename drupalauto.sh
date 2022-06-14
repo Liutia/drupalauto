@@ -21,5 +21,5 @@ esac
 else
 rm -rf drupalauto/ > /dev/null 2>&1
 git clone https://github.com/Liutia/drupalauto.git > /dev/null 2>&1
-bash drupalauto/drupalauto.sh
 fi
+bash drupalauto/drupalauto.sh
