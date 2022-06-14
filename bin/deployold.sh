@@ -51,5 +51,7 @@ fi
 
 echo "Local site created."
 pwd
+fin drush uli
+
 echo "  "
 bash drupalauto/main_menu.sh
