@@ -28,7 +28,7 @@ esac
 
 echo "Your composer version $V"
 
-fin restart
+fin restart > /dev/null 2>&1
 fin composer install
 bash ~/drupalauto/bin/addons.sh
 fin db import $db_path
@@ -36,16 +36,13 @@ fin drush cr
 
 if [ -z $web ]
 then
-cd sites/default/
+echo "if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {include $app_root . '/' . $site_path . '/settings.local.php';}" >> sites/default/settings.php
+wget -P sites/default "https://github.com/Liutia/drupalauto/blob/main/bin/config/settings.local.php"
 else
-cd web/sites/default/
+echo "if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {include $app_root . '/' . $site_path . '/settings.local.php';}" >> web/sites/default/settings.php
+wget -P web/sites/default "https://github.com/Liutia/drupalauto/blob/main/bin/config/settings.local.php"
 fi
 
-echo "if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {" >> settings.php
-echo "include $app_root . '/' . $site_path . '/settings.local.php';" >> settings.php
-echo "}" >> settings.php
-
-wget -P . "https://github.com/Liutia/drupalauto/blob/main/bin/config/settings.local.php"
 # } > /dev/null 2>&1
 
 echo "Local site created."
