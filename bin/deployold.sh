@@ -2,13 +2,17 @@
 
 echo "Write path to project directory"
 read path
+echo "  "
 echo "Write project repository path"
 read repo
+echo "  "
 echo "Write project directory name"
 # echo "Default name - repository name"
 read name
+echo "  "
 echo "Write path to db with db name"
 read db_path
+echo "  "
 
 cd $path
 git clone $repo $name > /dev/null 2>&1
@@ -47,4 +51,5 @@ fi
 
 echo "Local site created."
 pwd
+echo "  "
 bash drupalauto/main_menu.sh
