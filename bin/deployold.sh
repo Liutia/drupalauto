@@ -21,8 +21,8 @@ fin up > /dev/null 2>&1
 echo "Set composer version[1,2]"
 read V
 case $V in
-  1) fin config set COMPOSER_DEFAULT_VERSION=1;;
-  2) fin config set COMPOSER_DEFAULT_VERSION=2;;
+  1) fin config set COMPOSER_DEFAULT_VERSION=1;; > /dev/null 2>&1
+  2) fin config set COMPOSER_DEFAULT_VERSION=2;; > /dev/null 2>&1
   *) echo "Invalid version";;
 esac
 
