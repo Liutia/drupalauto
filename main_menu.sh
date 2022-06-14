@@ -9,6 +9,7 @@ echo "  4) Exit"
 echo "  "
 cd 
 read n
+echo "  "
 case $n in
   1) bash drupalauto/bin/newproject.sh;;
   2) bash drupalauto/bin/deployold.sh;;
