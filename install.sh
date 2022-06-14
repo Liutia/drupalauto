@@ -12,7 +12,7 @@ utilit_install(){
 # 	add-apt-repository -y ppa:ondrej/php
 # 	} > /dev/null 2>&1
 	echo "30%"
-	bash <(curl -fsSL https://get.docksal.io)
+# 	bash <(curl -fsSL https://get.docksal.io)
 	echo "60%"
 	snap install phpstorm --classic
 	echo "100%"
@@ -25,4 +25,4 @@ utilit_install
 echo "Drupal Auto installation is completed."
 sleep 3
 clear
-bash drupalauto_menu.sh
+bash drupalauto.sh
