@@ -7,7 +7,7 @@ read repo
 echo "Write project directory name"
 # echo "Default name - repository name"
 read name
-echo "Write path to db"
+echo "Write path to db with db name"
 read db_path
 
 cd $path
@@ -24,9 +24,7 @@ echo "Configuration site. Please wait"
 {
 fin up
 fin composer install
-fin config set --env=local XDEBUG_ENABLED=1
-fin addon install pma
-fin project start
+bash ~/drupalauto/bin/addons.sh
 fin db import $db_path
 fin drush cr
 
