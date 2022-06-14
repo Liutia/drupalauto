@@ -9,6 +9,7 @@ sh drupalauto.sh
 
 After start drupalauto.sh you must move to drupalauto directory and start drupalauto_menu.sh
 ```bash
-sh drupalauto_menu.sh
+cd
+sh drupalauto/drupalauto.sh
 ```
 
