@@ -36,11 +36,11 @@ cd $name
 
 if find . -type d -name "web" 
 then
-echo "if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {include $app_root . '/' . $site_path . '/settings.local.php';}" >> sites/default/settings.php
-cp ~/drupalauto/bin/config/settings.local.php sites/default/
-else
 echo "if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {include $app_root . '/' . $site_path . '/settings.local.php';}" >> web/sites/default/settings.php
 cp ~/drupalauto/bin/config/settings.local.php web/sites/default/
+else
+echo "if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {include $app_root . '/' . $site_path . '/settings.local.php';}" >> sites/default/settings.php
+cp ~/drupalauto/bin/config/settings.local.php sites/default/
 fi
 
 # } > /dev/null 2>&1
