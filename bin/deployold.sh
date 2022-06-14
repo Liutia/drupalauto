@@ -11,7 +11,7 @@ echo "Write path to db with db name"
 read db_path
 
 cd $path
-git clone $repo $name
+git clone $repo $name > /dev/null 2>&1
 cd $name
 
 # if [ -z $name ]
@@ -41,6 +41,10 @@ echo "}" >> settings.php
 
 wget -P . "https://github.com/Liutia/drupalauto/blob/main/bin/config/settings.local.php"
 } > /dev/null 2>&1
+
+cd
+cd $path
+cd $name
 
 echo "Local site created."
 pwd
