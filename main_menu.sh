@@ -14,6 +14,6 @@ case $n in
   1) bash drupalauto/bin/newproject.sh;;
   2) bash drupalauto/bin/deployold.sh;;
   3) fin pl -a ; bash drupalauto/main_menu.sh ;;
-  4) break;;
+  4) exit;;
   *) echo "invalid option";;
 esac
