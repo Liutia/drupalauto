@@ -10,7 +10,7 @@ utilit_install(){
 	apt-get -y install  ca-certificates apt-transport-https software-properties-common 
 	add-apt-repository -y ppa:ondrej/php
 	bash <(curl -fsSL https://get.docksal.io)
-	snap install phpstorm --classic
+	sudo snap install phpstorm --classic
 	} > /dev/null 2>&1
 }
 
