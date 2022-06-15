@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/sudo bash
 
 cd
 if find . -type d -name "drupalauto" > /dev/null 2>&1
