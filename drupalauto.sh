@@ -1,7 +1,7 @@
 #!/usr/bin/sudo bash
 
 cd
-if find . -type d -name "drupalauto" > /dev/null 2>&1
+if find ./ -type d -name "drupalauto" > /dev/null 2>&1
 then
 echo "  "
 echo "  Select the option"
